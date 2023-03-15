@@ -1,3 +1,34 @@
-[gd_scene format=3 uid="uid://dosc6flyi22vw"]
+[gd_scene load_steps=2 format=3 uid="uid://i5hwbya1riqb"]
+
+[ext_resource type="Script" path="res://CoinFlipper.gd" id="1_vpwvm"]
 
 [node name="Home" type="Node"]
+
+[node name="Node2D" type="Node2D" parent="."]
+scale = Vector2(4, 4)
+
+[node name="CoinFlipper" type="Control" parent="Node2D"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 161.683
+offset_top = 140.957
+offset_right = 201.683
+offset_bottom = 180.957
+script = ExtResource("1_vpwvm")
+
+[node name="Label" type="Label" parent="Node2D/CoinFlipper"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = -49.0
+offset_right = 106.0
+offset_bottom = -3.0
+
+[node name="Button" type="Button" parent="Node2D/CoinFlipper"]
+layout_mode = 0
+offset_left = -83.4325
+offset_top = -84.2069
+offset_right = 24.5675
+offset_bottom = -32.2069
+text = "Flip a coin"
+
+[connection signal="pressed" from="Node2D/CoinFlipper/Button" to="Node2D/CoinFlipper" method="_on_button_pressed"]
