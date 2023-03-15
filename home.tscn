@@ -1,112 +1,194 @@
-[gd_scene load_steps=2 format=3 uid="uid://i5hwbya1riqb"]
+[gd_scene load_steps=4 format=3 uid="uid://i5hwbya1riqb"]
 
+[ext_resource type="Script" path="res://home.gd" id="1_67awj"]
+[ext_resource type="Theme" uid="uid://4e5c7u2o0uwr" path="res://Default.tres" id="1_oby1v"]
 [ext_resource type="Script" path="res://CoinFlipper.gd" id="1_vpwvm"]
 
 [node name="Home" type="Node"]
+script = ExtResource("1_67awj")
 
 [node name="Zone_1" type="Control" parent="."]
 layout_mode = 3
-anchor_right = 0.648
-anchor_bottom = 0.387
-offset_right = -559.84
-offset_bottom = -742.8
-scale = Vector2(5, 5)
+anchors_preset = 0
+offset_right = 1080.0
+offset_bottom = 535.0
 size_flags_horizontal = 2
 size_flags_vertical = 2
-metadata/_edit_use_anchors_ = true
+theme = ExtResource("1_oby1v")
+metadata/_edit_group_ = true
 
 [node name="CoinFlipper" type="Panel" parent="Zone_1"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.2
-anchor_top = 0.411
-anchor_right = 0.879
-anchor_bottom = 0.818
-offset_top = 0.0459976
-offset_right = -0.0600128
-offset_bottom = -0.052002
+anchor_left = 0.0398148
+anchor_top = 0.0804829
+anchor_right = 0.636111
+anchor_bottom = 1.0
 grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("1_vpwvm")
+metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="Zone_1/CoinFlipper"]
 layout_mode = 1
 anchors_preset = -1
-anchor_top = 0.101
+anchor_top = 0.0805574
 anchor_right = 1.0
-anchor_bottom = 0.491
+anchor_bottom = 0.470557
 offset_top = -0.0370007
 offset_bottom = 0.0329971
 horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="Button" type="Button" parent="Zone_1/CoinFlipper"]
-clip_contents = true
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.055
-anchor_top = 0.523
-anchor_right = 0.961
-anchor_bottom = 0.879
+anchor_left = 0.0616153
+anchor_top = 0.523141
+anchor_right = 0.938408
+anchor_bottom = 0.879221
 offset_left = 0.0249996
 offset_top = -0.000999451
 offset_right = -0.0450058
 offset_bottom = 0.0269928
 text = "Flip a coin"
+metadata/_edit_use_anchors_ = true
 
 [node name="Zone_2" type="Control" parent="."]
 layout_mode = 3
-anchor_top = 0.42
-anchor_bottom = 0.42
-offset_top = -248.0
-offset_right = 140.0
-offset_bottom = -63.0
-scale = Vector2(5, 5)
+anchors_preset = 0
+offset_top = 582.0
+offset_right = 1080.0
+offset_bottom = 1374.0
 size_flags_horizontal = 0
 size_flags_vertical = 0
+theme = ExtResource("1_oby1v")
+metadata/_edit_group_ = true
 
 [node name="RandomFood" type="Panel" parent="Zone_2"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.2
-anchor_top = 0.411
-anchor_right = 0.2
-anchor_bottom = 0.411
-offset_top = -0.0350037
-offset_right = 112.0
-offset_bottom = 150.965
+anchor_left = 0.0401111
+anchor_right = 0.959889
+anchor_bottom = 1.0
+offset_left = -0.32
+offset_right = 0.319946
 grow_horizontal = 2
+theme = ExtResource("1_oby1v")
 script = ExtResource("1_vpwvm")
 button_function = 1
+metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="Zone_2/RandomFood"]
 layout_mode = 1
 anchors_preset = -1
 anchor_right = 1.0
-anchor_bottom = 0.392
-offset_top = 1.04904e-05
-offset_bottom = -0.231987
+anchor_bottom = 0.314
+offset_bottom = 0.347992
+theme = ExtResource("1_oby1v")
 horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Button" type="Button" parent="Zone_2/RandomFood"]
-clip_contents = true
 layout_mode = 1
 anchors_preset = -1
-anchor_top = 0.392
-anchor_right = 1.0
-anchor_bottom = 0.392
+anchor_left = 0.224183
+anchor_top = 0.314691
+anchor_right = 0.776033
+anchor_bottom = 0.315
 offset_left = 5.2
 offset_top = 0.00799561
 offset_right = -5.398
-offset_bottom = 42.044
-text = "What Food?"
+offset_bottom = 297.665
+theme = ExtResource("1_oby1v")
+text = "What
+Food?"
+metadata/_edit_use_anchors_ = true
 
 [node name="LineEdit" type="LineEdit" parent="Zone_2/RandomFood"]
-layout_mode = 0
-offset_left = 5.2
-offset_top = 109.0
-offset_right = 104.2
-offset_bottom = 140.0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0533769
+anchor_top = 0.741991
+anchor_right = 0.946623
+anchor_bottom = 0.741991
+offset_top = -0.343018
+offset_bottom = 152.657
+theme = ExtResource("1_oby1v")
 placeholder_text = "add more..."
+metadata/_edit_use_anchors_ = true
+
+[node name="Zone_3" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_top = 1422.0
+offset_right = 1080.0
+offset_bottom = 2068.0
+size_flags_horizontal = 2
+size_flags_vertical = 2
+theme = ExtResource("1_oby1v")
+
+[node name="Magic8Ball" type="Panel" parent="Zone_3"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0398148
+anchor_right = 0.960185
+anchor_bottom = 1.42105
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vpwvm")
+button_function = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="Label" type="Label" parent="Zone_3/Magic8Ball"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.028169
+anchor_top = 0.0806503
+anchor_right = 0.971831
+anchor_bottom = 0.470552
+offset_top = -0.0370007
+offset_bottom = 0.0329971
+theme_type_variation = &"HeaderSmall"
+horizontal_alignment = 1
+autowrap_mode = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="Button" type="Button" parent="Zone_3/Magic8Ball"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.0620139
+anchor_top = 0.583994
+anchor_right = 0.938005
+anchor_bottom = 0.940951
+offset_left = 0.0249996
+offset_top = -0.000999451
+offset_right = -0.0450058
+offset_bottom = 0.0269928
+text = "Ask me a question
+and press this button"
+metadata/_edit_use_anchors_ = true
+
+[node name="ExitButton" type="Button" parent="."]
+offset_left = 802.0
+offset_top = 40.0
+offset_right = 1032.0
+offset_bottom = 233.0
+theme = ExtResource("1_oby1v")
+
+[node name="Label" type="Label" parent="ExitButton"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.001
+offset_top = 24.0
+offset_bottom = -0.193008
+text = "❌"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="pressed" from="Zone_1/CoinFlipper/Button" to="Zone_1/CoinFlipper" method="_on_button_pressed"]
 [connection signal="pressed" from="Zone_2/RandomFood/Button" to="Zone_2/RandomFood" method="_on_button_pressed"]
 [connection signal="text_submitted" from="Zone_2/RandomFood/LineEdit" to="Zone_2/RandomFood" method="_on_line_edit_text_submitted"]
+[connection signal="pressed" from="Zone_3/Magic8Ball/Button" to="Zone_3/Magic8Ball" method="_on_button_pressed"]
+[connection signal="pressed" from="ExitButton" to="." method="_on_exit_button_pressed"]

@@ -1,0 +1,7 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://4e5c7u2o0uwr"]
+
+[ext_resource type="FontFile" uid="uid://bprug47lt4oyr" path="res://Font/UBUNTU-M.TTF" id="3_0c53d"]
+
+[resource]
+default_font = ExtResource("3_0c53d")
+default_font_size = 80
