@@ -5,7 +5,7 @@ enum button_types {CoinFlipper,RandomFood,Magic8Ball}
 @export var button_function = button_types.CoinFlipper
 
 enum sides {Heads,Tails}
-var food_types = ["Noodle","Rice","Bread"]
+var food_types : Array = ["Noodle","Rice","Bread"]
 var wisdom_by_magic = [
 	"Outlook hazy, try again after you've had your morning coffee.",
 	"Sorry, I can't answer that until you finish your broccoli.",
@@ -56,7 +56,8 @@ func _on_button_pressed():
 		var flipped = sides.find_key(randomness)
 		_displaythetext(flipped)
 	elif button_function == button_types.RandomFood :
-		_displaythetext(food_types.pick_random())
+		if food_types != [] :
+			_displaythetext(food_types.pick_random())
 	elif button_function == button_types.Magic8Ball :
 		_displaythetext(wisdom_by_magic.pick_random())
 
@@ -69,3 +70,7 @@ func _on_line_edit_text_submitted(new_text):
 	food_types.append(new_text)
 	$LineEdit.clear()
 	
+
+
+func _on_clear_button_pressed():
+	food_types = []

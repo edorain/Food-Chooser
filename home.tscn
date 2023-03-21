@@ -1,8 +1,12 @@
-[gd_scene load_steps=4 format=3 uid="uid://i5hwbya1riqb"]
+[gd_scene load_steps=6 format=3 uid="uid://i5hwbya1riqb"]
 
 [ext_resource type="Script" path="res://home.gd" id="1_67awj"]
 [ext_resource type="Theme" uid="uid://4e5c7u2o0uwr" path="res://Default.tres" id="1_oby1v"]
 [ext_resource type="Script" path="res://CoinFlipper.gd" id="1_vpwvm"]
+[ext_resource type="FontFile" uid="uid://cefi7tgj0a34h" path="res://Font/UBUNTU-L.TTF" id="4_6awj5"]
+
+[sub_resource type="FontVariation" id="FontVariation_5242x"]
+base_font = ExtResource("4_6awj5")
 
 [node name="Home" type="Node"]
 script = ExtResource("1_67awj")
@@ -92,10 +96,10 @@ vertical_alignment = 1
 [node name="Button" type="Button" parent="Zone_2/RandomFood"]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.224183
-anchor_top = 0.314691
-anchor_right = 0.776033
-anchor_bottom = 0.315
+anchor_left = 0.339839
+anchor_top = 0.314384
+anchor_right = 0.891689
+anchor_bottom = 0.314693
 offset_left = 5.2
 offset_top = 0.00799561
 offset_right = -5.398
@@ -117,6 +121,17 @@ offset_bottom = 152.657
 theme = ExtResource("1_oby1v")
 placeholder_text = "add more..."
 metadata/_edit_use_anchors_ = true
+
+[node name="ClearButton" type="Button" parent="Zone_2/RandomFood"]
+layout_mode = 0
+offset_left = 88.0
+offset_top = 446.0
+offset_right = 300.0
+offset_bottom = 545.0
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_fonts/font = SubResource("FontVariation_5242x")
+theme_override_font_sizes/font_size = 52
+text = "Clear all"
 
 [node name="Zone_3" type="Control" parent="."]
 layout_mode = 3
@@ -190,5 +205,6 @@ vertical_alignment = 1
 [connection signal="pressed" from="Zone_1/CoinFlipper/Button" to="Zone_1/CoinFlipper" method="_on_button_pressed"]
 [connection signal="pressed" from="Zone_2/RandomFood/Button" to="Zone_2/RandomFood" method="_on_button_pressed"]
 [connection signal="text_submitted" from="Zone_2/RandomFood/LineEdit" to="Zone_2/RandomFood" method="_on_line_edit_text_submitted"]
+[connection signal="pressed" from="Zone_2/RandomFood/ClearButton" to="Zone_2/RandomFood" method="_on_clear_button_pressed"]
 [connection signal="pressed" from="Zone_3/Magic8Ball/Button" to="Zone_3/Magic8Ball" method="_on_button_pressed"]
 [connection signal="pressed" from="ExitButton" to="." method="_on_exit_button_pressed"]
