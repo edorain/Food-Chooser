@@ -4,7 +4,7 @@ extends Control
 enum button_types {CoinFlipper,RandomFood,Magic8Ball}
 @export var button_function = button_types.CoinFlipper
 
-enum sides {GONG,HUA}
+enum sides {Heads,Tails}
 var food_types = ["Noodle","Rice","Bread"]
 var wisdom_by_magic = [
 	"Outlook hazy, try again after you've had your morning coffee.",
